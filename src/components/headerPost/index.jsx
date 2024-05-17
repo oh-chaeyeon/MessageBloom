@@ -64,7 +64,7 @@ export default function HeaderPost() {
     const postId = currentURL.substring(currentURL.lastIndexOf('/post/'));
 
     window.Kakao.Share.sendCustom({
-      templateId: import.meta.env.VITE_KAKAO_TEMPLATEID,
+      templateId: 'import.meta.env.VITE_KAKAO_TEMPLATEID',
       templateArgs: {
         url: postId,
       },

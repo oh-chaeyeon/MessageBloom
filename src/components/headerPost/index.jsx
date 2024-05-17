@@ -22,6 +22,7 @@ export default function HeaderPost() {
   const isTabletSize = windowWidth >= TABLET_WIDTH;
   const shareicon = isTabletSize ? shareicon24 : shareicon20;
   const dropdownRef = useRef(null);
+  const KAKAO_JS_SDK_KEY = import.meta.env.VITE_KAKAO_JS_SDK_KEY;
 
   useEffect(() => {
     async function fetchData() {
@@ -56,7 +57,7 @@ export default function HeaderPost() {
 
   useEffect(() => {
     window.Kakao.cleanup();
-    window.Kakao.init('import.meta.env.VITE_KAKAO_JS_SDK_KEY');
+    window.Kakao.init(KAKAO_JS_SDK_KEY);
   }, []);
 
   const shareKakao = () => {
@@ -64,7 +65,7 @@ export default function HeaderPost() {
     const postId = currentURL.substring(currentURL.lastIndexOf('/post/'));
 
     window.Kakao.Share.sendCustom({
-      templateId: 'import.meta.env.VITE_KAKAO_TEMPLATEID',
+      templateId: 107707,
       templateArgs: {
         url: postId,
       },

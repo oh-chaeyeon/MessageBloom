@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.toastui-editor-defaultUI .ProseMirror {
+  padding: 18px 25px;
+  @include font-style(16, Regular);
+}
+
+.toastui-editor-toolbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .placeholder {
+    font-size: 14px;
+  }
+}

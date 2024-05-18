@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.list-card__writers__profiles {
+  display: flex;
+}
+
+.list-card__writers__profiles-img {
+  width: 28px;
+  height: 28px;
+  position: relative;
+
+  & img {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1.5px solid $white;
+  }
+
+  & .list-card__writers__profiles-img2 {
+    left: -10px;
+  }
+
+  & .list-card__writers__profiles-img3 {
+    left: -20px;
+  }
+}

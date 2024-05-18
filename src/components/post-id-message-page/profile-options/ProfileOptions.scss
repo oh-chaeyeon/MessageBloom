@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+
+.message-form__title {
+  @include font-style(24, Bold);
+  margin-bottom: 12px;
+  margin-top: 50px;
+  display: block;
+}
+
+.message-form__profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .message-form__profile--selected {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+  }
+}
+
+.message-form__profile-options-title {
+  @include font-style(14, Regular);
+  line-height: 26px;
+  color: $gray500;
+}
+
+.message-form__profile-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 122px;
+  margin-left: 32px;
+}
+
+.message-form__profile--preview {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.message-form__profile-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+@media (min-width: 767px) {
+  .message-form__profile--preview {
+    width: 56px;
+    height: 56px;
+  }
+  .message-form__profile-preview-container {
+    gap: 4px;
+  }
+}

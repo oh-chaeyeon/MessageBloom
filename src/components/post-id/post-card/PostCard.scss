@@ -1,0 +1,146 @@
+@import '../../../styles/variables', '../../../styles/reset';
+
+.card-container {
+  width: 320px;
+  height: 230px;
+  margin: 0 auto;
+  background-color: $white;
+  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  font-family: 'pretendard', sans-serif;
+  transition: all 0.1s linear;
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.1s linear;
+  }
+  .card-info-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .card-info__img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .card-info-detail-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .card- .card-info__name {
+        @include font-style(16, Bold);
+      }
+      .card-info__role {
+        width: 41px;
+        height: 20px;
+        border-radius: 4px;
+        @include font-style(14, Regular);
+        padding: 0 8px 0 8px;
+      }
+      .card-info__role.collegue {
+        background-color: $purple100;
+        color: $purple600;
+      }
+      .card-info__role.family {
+        background-color: $green100;
+        color: $green500;
+      }
+      .card-info__role.friend {
+        background-color: $blue100;
+        color: $blue500;
+      }
+      .card-info__role.known {
+        background-color: $beige100;
+        color: $beige500;
+      }
+    }
+  }
+  .card__underline {
+    width: 100%;
+    height: 1px;
+    background-color: $gray200;
+    margin: 15px 0 20px 0;
+  }
+  .card__contents {
+    height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+    .card__content {
+      height: fit-content;
+      &.Noto-Sans {
+        font-family: 'Noto-Sans', sans-serif;
+        @include font-style(14, Regular);
+      }
+      &.pretendard {
+        font-family: 'pretendard', sans-serif;
+        @include font-style(14, Regular);
+      }
+      &.NanumMyeongjo {
+        font-family: 'NanumMyeongjo', sans-serif;
+        @include font-style(14, Regular);
+      }
+      &.NanumSonPyeonJiCe {
+        font-family: 'NanumSonPyeonJiCe', sans-serif;
+        @include font-style(18, Regular);
+      }
+    }
+  }
+
+  .card__date {
+    float: left;
+    color: $gray400;
+    @include font-style(12, Regular);
+  }
+}
+
+@media #{$tablet-screen} {
+  .card-container {
+    width: 352px;
+    height: 284px;
+    .card-info-container {
+      gap: 15px;
+      .card-info__img {
+        width: 56px;
+        height: 56px;
+      }
+      .card-info__name {
+        @include font-style(18, Bold);
+      }
+    }
+    .card__contents {
+      height: 130px;
+      line-height: 25px;
+      .card__content {
+        height: fit-content;
+        &.Noto-Sans {
+          font-family: 'Noto-Sans', sans-serif;
+          @include font-style(18, Regular);
+        }
+        &.pretendard {
+          font-family: 'pretendard', sans-serif;
+          @include font-style(18, Regular);
+        }
+        &.NanumMyeongjo {
+          font-family: 'NanumMyeongjo', sans-serif;
+          @include font-style(16, Regular);
+        }
+        &.NanumSonPyeonJiCe {
+          font-family: 'NanumSonPyeonJiCe', sans-serif;
+          @include font-style(24, Regular);
+        }
+      }
+      .card__date {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  @media #{$desktop-screen} {
+    .card-container {
+      width: 384px;
+      height: 280px;
+    }
+  }
+}

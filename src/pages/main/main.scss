@@ -1,0 +1,159 @@
+@import '../../styles/reset', '../../styles/variables';
+
+//박스 투명도
+$box-opacity: 0.3;
+
+//색상변수
+$box-bg-color: rgba($accent-background-light, $box-opacity);
+$btn-bg-color: $accent-color;
+$font-title-color: $gray900;
+$font-description-color: $gray500;
+$font-btn-color: $white;
+
+//container width 변수
+$container-width-mobile: 320px;
+$container-width-tablet: 720px;
+$container-width-desktop: 1200px;
+
+body {
+  min-width: 360px;
+}
+
+//공통 스타일
+.layout-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1248;
+  margin-top: 64px;
+  padding: 0 24px;
+
+  .container {
+    width: $container-width-mobile;
+    padding: 24px 0;
+    border: 1px solid $box-bg-color;
+    border-radius: 16px;
+    background-color: $box-bg-color;
+    margin-bottom: 24px;
+
+    &__text {
+      width: 100%;
+      padding: 0 24px;
+      margin-bottom: 50px;
+      word-break: keep-all;
+
+      .container__btn-point {
+        @include font-style(14, Bold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 32px;
+        border-radius: 50px;
+        background-color: $btn-bg-color;
+        color: $font-btn-color;
+        margin-bottom: 16px;
+      }
+      .container__section-title {
+        @include font-style(18, Bold);
+        color: $font-title-color;
+      }
+      .container__description {
+        @include font-style(15, Regular);
+        margin-top: 8px;
+        color: $font-description-color;
+      }
+    }
+
+    &__photo {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  // 태블릿 버전
+  @media #{$tablet-screen} {
+    .container {
+      width: $container-width-tablet;
+      padding: 40px 0;
+
+      &__text {
+        width: 100%;
+        padding: 0 40px;
+        margin-bottom: 36px;
+        .container__section-title {
+          @include font-style(24, Bold);
+        }
+        .container__description {
+          @include font-style(18, Regular);
+        }
+      }
+
+      &__photo {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  // 데스크톱 버전
+  @media #{$desktop-screen} {
+    .container {
+      width: $container-width-desktop;
+      height: 324px;
+      display: flex;
+      align-items: center;
+      padding: 60px 0;
+
+      &__text {
+        padding: 0 24px;
+        align-self: flex-start;
+        width: 258px;
+        height: 156px;
+
+        .container__section-title {
+          @include font-style(24, Bold);
+        }
+        .container__description {
+          @include font-style(18, Regular);
+        }
+      }
+
+      &__photo {
+        margin-bottom: 24px;
+      }
+    }
+
+    .container__img-right {
+      justify-content: space-between;
+
+      .container__text {
+        width: 480px;
+        padding-left: 60px;
+        padding-right: 80px;
+      }
+
+      .container__photo--message {
+        width: 720px;
+        margin-left: auto;
+      }
+    }
+
+    .container__img-left {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+
+      .container__text {
+        width: 480px;
+        padding-right: 150px;
+      }
+
+      .container__photo--emoji {
+        width: 720px;
+        margin-right: auto;
+      }
+    }
+  }
+}

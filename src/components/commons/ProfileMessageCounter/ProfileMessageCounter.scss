@@ -1,0 +1,87 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+.profile-message-counter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 11px;
+
+  &.horizontal {
+    /* 세로 옵션이 있는 경우에만 적용되는 스타일 */
+    flex-direction: row;
+  }
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .profile-message-counter__profile-images {
+    display: flex;
+    align-items: center;
+
+    .profile-message-counter__profile-image-img {
+      display: flex;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid $white;
+      border-radius: 50%;
+      background-color: $white;
+    }
+
+    .profile-message-counter__remaining-profiles {
+      @include font-style(12, Regular);
+      line-height: 18px;
+      width: 28px;
+      height: 28px;
+      background-color: $white;
+      color: $gray600;
+      padding: 4px 0;
+      border: 2px solid $gray200;
+      border-radius: 50%;
+      text-align: center;
+
+      &.vertical {
+        width: 33px;
+        border-radius: 30px;
+        padding: 5px, 6px;
+        border: 1px solid $white;
+        text-align: center;
+      }
+    }
+
+    .profile-message-counter__profile-image,
+    .profile-message-counter__remaining-profiles {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: -10px;
+      }
+
+      &.vertical {
+        width: 33px;
+        border-radius: 30px;
+        padding: 5px 6px;
+        border: 1px solid $white;
+        text-align: center;
+      }
+    }
+  }
+
+  .profile-message-counter__profile-image-null {
+    width: 100%;
+    height: 28px;
+  }
+
+  .profile-message-counter__message {
+    .profile-message-counter__message-count-number {
+      @include font-style(18, Bold);
+    }
+
+    .profile-message-counter__message-count-text {
+      @include font-style(18, Regular);
+    }
+  }
+}

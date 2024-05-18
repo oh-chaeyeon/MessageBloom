@@ -1,0 +1,96 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+.custom-image-modal-wrapper {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  .custom-image-modal-container {
+    width: 320px;
+    height: 160px;
+    border-radius: 16px;
+    margin: 100px auto 0 auto;
+    background-color: $white;
+    gap: 15px;
+    position: relative;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: modalUp 0.5s ease-in-out;
+    &__input {
+      height: 35px;
+      width: 100%;
+      border: 1px solid $gray300;
+      border-radius: 6px;
+      padding-left: 10px;
+      font-size: 16px;
+      display: block;
+    }
+    &__input::placeholder {
+      color: $gray200;
+    }
+    &__btns {
+      display: flex;
+      gap: 30px;
+      #custom-image-modal-container__btns-check-btn {
+        padding: 5px 15px;
+        border: none;
+        color: $white;
+        background-color: $accent-color;
+        border-radius: 6px;
+        cursor: pointer;
+        outline: none;
+      }
+      #custom-image-modal-container__btns-cancel-btn {
+        padding: 5px 15px;
+        border: none;
+        color: $white;
+        background-color: $gray400;
+        border-radius: 6px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-screen} {
+  .custom-image-modal-wrapper {
+    .custom-image-modal-container {
+      width: 540px;
+      height: 220px;
+      gap: 40px;
+
+      &__input {
+        height: 35px;
+        margin-top: -15px;
+        border: 1px solid $gray300;
+        border-radius: 6px;
+        padding-left: 10px;
+        font-size: 16px;
+      }
+
+      &__message {
+        margin-top: 20px;
+        @include font-style(24, Bold);
+      }
+      &__btns {
+        margin-top: -15px;
+        display: flex;
+        gap: 50px;
+        #custom-image-modal-container__btns-check-btn,
+        #custom-image-modal-container__btns-cancel-btn {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.list-cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 280px;
+}
+
+.loading-box {
+  display: flex;
+}
+
+@media #{$desktop-screen} {
+  .list-cards-container {
+    overflow: hidden auto;
+  }
+}

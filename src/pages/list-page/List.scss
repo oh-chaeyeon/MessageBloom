@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+.list {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 74px;
+}
+
+.list__best-title,
+.list__newest-title {
+  margin: auto;
+  min-width: 320px;
+  padding-left: 20px;
+  @include font-style(24, Bold);
+  padding-bottom: 12px;
+}
+
+.list__icon {
+  width: 23px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
+
+.list__create-btn__wrap {
+  margin: auto;
+  width: 320px;
+}
+
+.list__create-btn {
+  border: 0px;
+  background-color: #f26d85;
+  color: $white;
+  width: 100%;
+  height: 56px;
+  padding: 14px 24px;
+  margin: 24px auto;
+  border-radius: 12px;
+  @include font-style(18, Regular);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media #{$tablet-screen} {
+  .list {
+    width: 720px;
+  }
+
+  .list__create-btn__wrap {
+    width: 720px;
+  }
+}
+
+@media #{$desktop-screen} {
+  .list {
+    width: 1180px;
+  }
+
+  .list__create-btn__wrap {
+    width: 280px;
+  }
+}

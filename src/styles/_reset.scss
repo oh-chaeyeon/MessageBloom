@@ -1,0 +1,23 @@
+// reset.css 일부
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

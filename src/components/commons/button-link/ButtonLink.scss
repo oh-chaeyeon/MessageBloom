@@ -1,0 +1,63 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+//색상변수
+$box-bg-color: $accent-background-light;
+$btn-bg-color: $accent-color;
+$font-title-color: $gray900;
+$font-description-color: $gray500;
+$font-btn-color: $white;
+
+//버튼 너비 변수
+$btn-width-mobile: 320px;
+$btn-width-tablet: 720px;
+$btn-width-desktop: 280px;
+
+.button-link {
+  display: inline-block;
+  width: $btn-width-mobile;
+}
+
+.button-link__button {
+  @include font-style(18, Regular);
+  color: $font-btn-color;
+  white-space: nowrap;
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  background-color: $btn-bg-color;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.button-link--disabled {
+  background-color: $gray300;
+}
+
+/*tablet version*/
+@media #{$tablet-screen} {
+  .button-link {
+    width: $btn-width-tablet;
+  }
+}
+
+/*desktop version*/
+@media #{$desktop-screen} {
+  .button-link {
+    text-align: center;
+
+    &__button {
+      width: $btn-width-desktop;
+    }
+
+    &__button.full-width {
+      width: 100%;
+      max-width: 720px;
+    }
+  }
+}

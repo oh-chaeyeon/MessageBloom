@@ -1,0 +1,188 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+@keyframes modalUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  .modal-container {
+    width: 330px;
+    height: 320px;
+    border-radius: 16px;
+    margin: 100px auto 0 auto;
+    background-color: $white;
+    padding: 20px;
+    animation: modalUp 0.5s ease-in-out;
+    .modal-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .modal-info__img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .modal-info-detail-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .modal-info__name {
+          @include font-style(14, Bold);
+        }
+        .modal-info__role {
+          width: 37px;
+          height: 17px;
+          border-radius: 4px;
+          @include font-style(12, Regular);
+          padding: 0 8px 0 8px;
+        }
+        .modal-info__role.collegue {
+          background-color: $purple100;
+          color: $purple600;
+        }
+        .modal-info__role.family {
+          background-color: $green100;
+          color: $green500;
+        }
+        .modal-info__role.friend {
+          background-color: $blue100;
+          color: $blue500;
+        }
+        .modal-info__role.known {
+          background-color: $beige100;
+          color: $beige500;
+        }
+      }
+      .modal__date {
+        margin-left: auto;
+        @include font-style(12, Regular);
+        color: $gray400;
+      }
+    }
+    .modal__underline {
+      width: 100%;
+      height: 1px;
+      background-color: $gray200;
+      margin: 15px 0 15px 0;
+    }
+    .modal__content-container {
+      height: 140px;
+      overflow: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        height: 100px;
+        background: $accent-background-thick;
+        border-radius: 10px;
+      }
+      .modal__content {
+        line-height: 20px;
+        &.Noto-Sans {
+          font-family: 'Noto-Sans', sans-serif;
+          @include font-style(14, Regular);
+        }
+        &.pretendard {
+          font-family: 'pretendard', sans-serif;
+          @include font-style(14, Regular);
+        }
+        &.NanumMyeongjo {
+          font-family: 'NanumMyeongjo', sans-serif;
+          @include font-style(14, Regular);
+        }
+        &.NanumSonPyeonJiCe {
+          font-family: 'NanumSonPyeonJiCe', sans-serif;
+          @include font-style(18, Regular);
+        }
+      }
+    }
+    #modal-confirm__btn {
+      position: relative;
+      padding: 7px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: $gray400;
+      @include font-style(12, Bold);
+      color: $white;
+      cursor: pointer;
+      margin-top: 15px;
+      left: 115px;
+      outline: none;
+      &:focus {
+        background-color: $accent-color;
+      }
+    }
+  }
+}
+
+@media #{$tablet-screen} {
+  .modal-wrapper {
+    .modal-container {
+      width: 600px;
+      height: 476px;
+      padding: 35px;
+      .modal-info {
+        .modal-info-detail-container {
+          .modal-info__name {
+            @include font-style(18, Bold);
+          }
+          .modal-info__role {
+            width: 41px;
+            height: 20px;
+            @include font-style(14, Regular);
+          }
+        }
+        .modal__date {
+          @include font-style(14, Regular);
+        }
+      }
+      .modal__underline {
+        margin: 20px 0 25px 0;
+      }
+      .modal__content-container {
+        height: 240px;
+        .modal__content {
+          line-height: 27px;
+          height: 25px;
+          &.Noto-Sans {
+            font-family: 'Noto-Sans', sans-serif;
+            @include font-style(18, Regular);
+          }
+          &.pretendard {
+            font-family: 'pretendard', sans-serif;
+            @include font-style(18, Regular);
+          }
+          &.NanumMyeongjo {
+            font-family: 'NanumMyeongjo', sans-serif;
+            @include font-style(18, Regular);
+          }
+          &.NanumSonPyeonJiCe {
+            font-family: 'NanumSonPyeonJiCe', sans-serif;
+            @include font-style(28, Regular);
+          }
+        }
+      }
+      #modal-confirm__btn {
+        width: 120px;
+        height: 40px;
+        font-size: 15px;
+        left: 200px;
+      }
+    }
+  }
+}

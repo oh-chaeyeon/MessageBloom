@@ -1,0 +1,93 @@
+@import '../../../styles/variables';
+
+.list-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  min-width: 208px;
+  height: 232px;
+  margin: 0 10px;
+  border-radius: 16px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
+  background-position: center;
+  background-size: cover;
+  color: $gray900;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.1s linear;
+  }
+}
+
+.--purple {
+  background: $bg-purple;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.--beige {
+  background-color: $bg-beige;
+}
+
+.--green {
+  background-color: $bg-green;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.--blue {
+  background-color: $bg-blue;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list-card__writers {
+  width: 125px;
+  height: 114px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.list-card__writers__to {
+  @include font-style(18, Bold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-card__text {
+  @include font-style(14, Regular);
+
+  span {
+    @include font-style(14, Bold);
+  }
+}
+
+.list-card__container {
+  width: 162px;
+  height: 182px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media #{$tablet-screen} {
+  .list-card {
+    min-width: 275px;
+    height: 260px;
+  }
+
+  .list-card__container {
+    width: 227px;
+    height: 210px;
+    margin: 30px 24px 20px 24px;
+  }
+
+  .list-card__writers__to {
+    font-size: 24px;
+    width: 200px;
+  }
+
+  .list-card__text {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.arrow-button__container {
+  position: relative;
+}
+
+.arrow-button {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid $gray300;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.left {
+  position: absolute;
+  top: 120px;
+  left: -10px;
+}
+
+.right {
+  position: absolute;
+  top: 120px;
+  right: -10px;
+}

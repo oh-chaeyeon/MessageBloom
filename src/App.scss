@@ -1,0 +1,21 @@
+@import './styles/variables', './styles/reset';
+
+body * {
+  font-family: 'pretendard';
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 100px;
+  background: $accent-background-thick;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  display: none;
+}
+
+* {
+  transition: all 0.3s ease-out;
+}

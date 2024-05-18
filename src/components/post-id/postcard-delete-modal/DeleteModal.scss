@@ -1,0 +1,66 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+.delete-modal-wrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  .delete-modal-container {
+    width: 330px;
+    height: 120px;
+    border-radius: 16px;
+    margin: 100px auto 0 auto;
+    background-color: $white;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: modalUp 0.5s ease-in-out;
+    &__message {
+      margin-top: 15px;
+      @include font-style(16, Bold);
+    }
+    &__btns {
+      display: flex;
+      gap: 30px;
+      #delete-modal-container__btns-check-btn,
+      #delete-modal-container__btns-cancel-btn {
+        padding: 5px 15px;
+        border: none;
+        color: $white;
+        background-color: $gray400;
+        border-radius: 6px;
+        cursor: pointer;
+        outline: none;
+        &:focus {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-screen} {
+  .delete-modal-wrapper {
+    .delete-modal-container {
+      width: 540px;
+      height: 180px;
+      gap: 40px;
+      &__message {
+        margin-top: 20px;
+        @include font-style(24, Bold);
+      }
+      &__btns {
+        display: flex;
+        gap: 50px;
+        #delete-modal-container__btns-check-btn,
+        #delete-modal-container__btns-cancel-btn {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}

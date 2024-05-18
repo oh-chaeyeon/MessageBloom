@@ -1,0 +1,17 @@
+@import '../../../styles/reset', '../../../styles/variables';
+
+#card__delete-btn {
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $gray300;
+  border-radius: 6px;
+  margin-left: auto;
+  cursor: pointer;
+  img {
+    color: $black;
+  }
+  &:hover {
+    background-color: $gray200;
+  }
+}

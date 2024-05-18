@@ -1,0 +1,133 @@
+// media 변수
+$tablet-screen: 'screen and (min-width: 768px)';
+$desktop-screen: 'screen and (min-width: 1200px)';
+
+// font 변수
+// font
+@font-face {
+  font-family: 'pretendard';
+  src: url('/Pretendard-Regular.ttf');
+}
+@font-face {
+  font-family: 'Noto-Sans';
+  src: url('/NotoSansKR-Regular.ttf');
+}
+@font-face {
+  font-family: 'NanumMyengjo';
+  src: url('/NanumMyengjo-Regular.ttf');
+}
+@font-face {
+  font-family: 'NanumSonPyeonJiCe';
+  src: url('/NanumSonPyeonJiCe-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'poppins-bold';
+  src: url('/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'poppins-regular';
+  src: url('/Poppins-Regular.ttf');
+}
+
+// font sizes
+$font-sizes: (
+  28: 28px,
+  24: 24px,
+  20: 20px,
+  18: 18px,
+  16: 16px,
+  15: 15px,
+  14: 14px,
+  12: 12px,
+);
+
+// font weights
+$font-weights: (
+  Bold: 700,
+  Regular: 400,
+);
+
+// mixin
+@mixin font-style($size, $weight) {
+  font-size: map-get($font-sizes, $size);
+  font-weight: map-get($font-weights, $weight);
+}
+
+@mixin form-error-style {
+  border-color: $error;
+  color: $error;
+  font-size: 14px;
+  font-weight: Regular;
+  line-height: 18px;
+}
+
+// color 변수
+// purple color
+$purple100: #f8f0ff;
+$purple200: #ecd9ff;
+$purple300: #dcb9ff;
+$purple400: #c894fd;
+$purple500: #ab57ff;
+$purple600: #9935ff;
+$purple700: #861dee;
+$purple800: #6e0ad1;
+$purple900: #5603a7;
+
+// beige color
+$beige100: #fff0d6;
+$beige200: #ffe2ad;
+$beige300: #ffc583;
+$beige400: #ffae65;
+$beige500: #ff8832;
+
+// blue color
+$blue100: #e2f5ff;
+$blue200: #b1e4ff;
+$blue300: #7cd2ff;
+$blue400: #34b9ff;
+$blue500: #00a2fe;
+
+// green color
+$green100: #e4fbdc;
+$green200: #d0f5c3;
+$green300: #9be282;
+$green400: #60cf37;
+$green500: #2ba600;
+
+// gray color
+$gray100: #f6f6f6;
+$gray200: #eeeeee;
+$gray300: #cccccc;
+$gray400: #999999;
+$gray500: #555555;
+$gray600: #4a4a4a;
+$gray700: #3a3a3a;
+$gray800: #2b2b2b;
+$gray900: #181818;
+
+// other color
+$white: #ffffff;
+$black: #000000;
+$error: #dc3a3a;
+$success: #00b609;
+$surface: #f6f8ff;
+$accent-color: #f26d85;
+$accent-background-light: #f2e4e9;
+$accent-background-thick: #f2cedf;
+
+// background-color
+$bg-purple: #ffdde1;
+$bg-beige: #ffedbc;
+$bg-green: #e1eec3;
+$bg-blue: #e0eafc;
+
+// z-index 변수
+$z-indexes: (
+  level1: 10,
+  level2: 20,
+  level3: 30,
+  level4: 40,
+  level5: 50,
+);

@@ -1,0 +1,34 @@
+.falling-letter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.falling-letter {
+  position: absolute; /* 절대적인 위치로 설정 */
+  animation: letter-fall 5s linear infinite;
+  font-size: 20px;
+  opacity: 0; /* 시작할 때 투명도를 0으로 설정 */
+}
+
+/* 각 편지 요소에 대한 애니메이션 설정 */
+@for $i from 1 through 14 {
+  .falling-letter:nth-child(#{$i}) {
+    animation-delay: #{($i - 1) * 0.5}s; /* 각 편지 요소마다 0.5초씩 차이로 설정 */
+    left: calc(#{$i} * 20%); /* 왼쪽으로부터 편지 요소의 시작 위치 설정 */
+  }
+}
+
+@keyframes letter-fall {
+  from {
+    top: -10%; /* 시작 위치를 상단에서 지정 */
+    opacity: 0; /* 시작할 때 투명도를 조정 */
+  }
+  to {
+    top: 100%; /* 화면 하단까지 내려가도록 설정 */
+    opacity: 1; /* 애니메이션이 끝날 때 투명도를 1로 설정 */
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "조현지",
+      "backgroundColor": "beige",
+      "backgroundImageURL": "",
+      "createdAt": "2024-04-03",
+      "messageCount": "1",
+      "recentMessage": "",
+      "reactionCount": 0,
+      "topReactions": ""
+    },
+    {
+      "id": 2,
+      "name": "정우기",
+      "backgroundColor": "purple",
+      "backgroundImageURL": "",
+      "createdAt": "2024-05-01",
+      "messageCount": "6",
+      "recentMessage": "",
+      "reactionCount": 0,
+      "topReactions": ""
+    },
+    {
+      "id": 3,
+      "name": "원찬희",
+      "backgroundColor": "blue",
+      "backgroundImageURL": "",
+      "createdAt": "2024-05-03",
+      "messageCount": "2",
+      "recentMessage": "",
+      "reactionCount": 0,
+      "topReactions": ""
+    },
+    {
+      "id": 4,
+      "name": "김진윤",
+      "backgroundColor": "green",
+      "backgroundImageURL": "",
+      "createdAt": "2024-05-02",
+      "messageCount": "18",
+      "recentMessage": "",
+      "reactionCount": 0,
+      "topReactions": ""
+    },
+    {
+      "id": 5,
+      "name": "오채연",
+      "backgroundColor": "beige",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-05-01",
+      "messageCount": "54",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 6,
+      "name": "조현지",
+      "backgroundColor": "purple",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-25",
+      "messageCount": "2",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 7,
+      "name": "오채연",
+      "backgroundColor": "purple",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "1",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 8,
+      "name": "김진윤",
+      "backgroundColor": "blue",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-22",
+      "messageCount": "14",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 9,
+      "name": "원찬희",
+      "backgroundColor": "blue",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "6",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 10,
+      "name": "정우기",
+      "backgroundColor": "purple",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-27",
+      "messageCount": "10",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 11,
+      "name": "조현지",
+      "backgroundColor": "green",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "1",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 12,
+      "name": "정우기",
+      "backgroundColor": "beige",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "30",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 13,
+      "name": "원찬희",
+      "backgroundColor": "blue",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "11",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 14,
+      "name": "이승헌",
+      "backgroundColor": "purple",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "21",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 15,
+      "name": "이영훈",
+      "backgroundColor": "green",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-29",
+      "messageCount": "0",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 16,
+      "name": "주강산",
+      "backgroundColor": "beige",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-22",
+      "messageCount": "0",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 17,
+      "name": "한상우",
+      "backgroundColor": "blue",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "0",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    },
+    {
+      "id": 18,
+      "name": "김보미",
+      "backgroundColor": "green",
+      "backgroundImageURL": "url",
+      "createdAt": "2024-04-30",
+      "messageCount": "0",
+      "recentMessage": "",
+      "reactionCount": 6,
+      "topReactions": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.message-form__sender {
+  input {
+    cursor: auto;
+  }
+}
+
+.form--error {
+  @include form-error-style;
+}

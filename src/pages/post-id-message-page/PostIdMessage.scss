@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-form {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.message-form__title {
+  @include font-style(24, Bold);
+  margin-bottom: 12px;
+  margin-top: 50px;
+  display: block;
+}
+
+.message-form__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 50px;
+  border: 1px solid $gray300;
+  border-radius: 8px;
+  padding: 12px 16px 12px 16px;
+  @include font-style(16, Regular);
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  appearance: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+.message-form__inputs::placeholder {
+  @include font-style(16, Regular);
+  line-height: 26px;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 767px) {
+  .message-form {
+    width: 717px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .message-form {
+    width: 720px;
+  }
+}
